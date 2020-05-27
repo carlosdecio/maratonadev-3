@@ -50,7 +50,7 @@ nunjucks.configure("./", {
 server.get("/", function(req, res) {
   
   db.query("SELECT * FROM donors", function(err, result){
-    console.log(err)
+    //console.log(err)
     if (err) return res.send("Erro de banco de dados.")
 
     const donors = result.rows
@@ -89,7 +89,7 @@ server.post("/", function(req, res) {
 
   db.query(query, values, function(err) {
     // fluxo de erro
-    console.log(err)
+    //console.log(err)
     if (err) return res.send("erro no banco de dados.")
 
     // fluxo ideal
